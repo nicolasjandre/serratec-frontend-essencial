@@ -5,13 +5,10 @@ import { HandleMediaQueries } from "../utils/HandleMediaQueries.js"
 
 const authentication = new AuthenticationService();
 
-// Verificamos se o usuário está autenticado, caso não esteja, retornamos ele pra tela de login
 if (!authentication.isAuthenticated()) {
     window.location.href = "login.html";
 }
 
-
-// Criamos cada uma de nossas constantes referenciando elementos html
 const welcomeParagraph = document.getElementById("welcome");
 const logoutButton = document.getElementById("logout");
 const addButton = document.getElementById("add-button");

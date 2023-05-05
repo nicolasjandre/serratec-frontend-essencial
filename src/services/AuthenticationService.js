@@ -33,8 +33,6 @@ export class AuthenticationService {
         const email = inputEmail.value;
         const password = inputPassword.value;
 
-        console.log(email, password);
-
         const user = this.users.find(localUser => localUser.email === email);
 
         if (user === undefined || user.password !== password) {
@@ -48,7 +46,6 @@ export class AuthenticationService {
 
         window.location.href = "favoritos.html";
     }
-
 
     logout(email) {
         localStorage.removeItem("GithubFavorites.token." + email);
